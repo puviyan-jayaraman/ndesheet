@@ -1,0 +1,52 @@
+// {
+//   "compilerOptions": {
+//     "target": "ES2020",
+//     "module": "ESNext",
+//     "moduleResolution": "Node",
+//     "declaration": true,
+//     "sourceMap": true,
+//     "jsx": "react-jsx",
+//     "strict": true,
+//     "skipLibCheck": true,
+//     "allowSyntheticDefaultImports": true,
+//     "resolveJsonModule": true,
+//     "esModuleInterop": true,
+//     "baseUrl": ".",
+//     "paths": {
+//       "@nde/core": ["packages/core/src"],
+//       "@nde/react": ["packages/react/src"]
+//     }
+//   },
+//   "include": ["packages/*/src"],
+//   "exclude": ["node_modules", "dist", "lib"]
+// }
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "declaration": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "removeComments": true,
+    "moduleResolution": "node",
+    "noLib": false,
+    "jsx": "react",
+    "strict": true,
+    "strictNullChecks": true,
+    "skipLibCheck": true,
+    "lib": ["es5", "dom"],
+    "baseUrl": "./",
+    "paths": {
+      "@nde-sheet/core": ["packages/core/src"],
+      "@nde-sheet/react": ["packages/react/src"]
+    }
+  },
+  "include": ["packages/*/src"],
+  "exclude": [
+    "node_modules",
+    "packages/*/lib",
+    "packages/*/dist",
+    "**/*.spec.ts",
+    "**/*.test.ts"
+  ]
+}

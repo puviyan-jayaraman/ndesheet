@@ -1,0 +1,57 @@
+{
+  "name": "@nde-sheet/react",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc && copyfiles -u 1 src/*.css dist"
+  },
+  "files": [
+    "dist/*"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    },
+    "./dist/": "./dist/"
+  },
+  "sideEffects": [
+    "./dist/index.css"
+  ],
+  "devDependencies": {
+    "@types/lodash": "^4.17.20",
+    "@types/react": "^19.2.5",
+    "@types/react-dom": "^19.2.3",
+    "copyfiles": "^2.4.1",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@nde/core": "1.0.4",
+    "@types/regenerator-runtime": "^0.13.6",
+    "immer": "^9.0.12",
+    "lodash": "^4.17.21",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "regenerator-runtime": "^0.14.1"
+  },
+  "keywords": [
+    "spreadsheet",
+    "sheet",
+    "excel",
+    "data table",
+    "table",
+    "data grid",
+    "react",
+    "reactjs",
+    "react component",
+    "collabration",
+    "collabrative"
+  ]
+}
