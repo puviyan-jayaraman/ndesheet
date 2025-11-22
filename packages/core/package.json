@@ -19,7 +19,8 @@
   "scripts": {
     "build": "tsc ",
     "dev": "tsc --watch",
-    "clean": "rimraf dist"
+    "clean": "rimraf dist",
+    "prepare": "npm run build"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.179",
