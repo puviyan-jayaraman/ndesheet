@@ -1,0 +1,133 @@
+import { v4 as uuidv4 } from "uuid";
+export const defaultSettings = {
+    column: 60, // 空表格默认的列数量
+    row: 84, // 空表格默认的行数据量
+    addRows: 50, // It will add the rows when we click on add row button
+    showToolbar: true, // 是否显示工具栏
+    showFormulaBar: true, // 是否显示公式栏
+    showSheetTabs: true, // 是否显示底部表格名称区域
+    data: [], // 客户端sheet数据[sheet1, sheet2, sheet3]
+    config: {}, // 表格行高、列宽、合并单元格、公式等设置
+    devicePixelRatio: 0, // 设备比例，比例越大表格分标率越高，0表示自动
+    allowEdit: true, // 是否允许前台编辑
+    lang: null, // language
+    forceCalculation: false, // 强制刷新公式，公式较多会有性能问题，慎用
+    rowHeaderWidth: 46,
+    columnHeaderHeight: 20,
+    defaultColWidth: 73,
+    defaultRowHeight: 19,
+    defaultFontSize: 10,
+    toolbarItems: [
+        "undo",
+        "redo",
+        "format-painter",
+        "clear-format",
+        "|",
+        "currency-format",
+        "percentage-format",
+        "number-decrease",
+        "number-increase",
+        "format",
+        "|",
+        "font",
+        "|",
+        "font-size",
+        "|",
+        "bold",
+        "italic",
+        "strike-through",
+        "underline",
+        "|",
+        "font-color",
+        "background",
+        "border",
+        "merge-cell",
+        "|",
+        "horizontal-align",
+        "vertical-align",
+        "text-wrap",
+        "text-rotation",
+        "|",
+        "freeze",
+        "conditionFormat",
+        "filter",
+        "link",
+        "image",
+        "comment",
+        "quick-formula",
+        "dataVerification",
+        "splitColumn",
+        "locationCondition",
+        "screenshot",
+        "search",
+    ], // 自定义工具栏
+    cellContextMenu: [
+        "copy", // 复制
+        "paste", // 粘贴
+        "|",
+        "insert-row", // 插入行
+        "insert-column", // 插入列
+        "delete-row", // 删除选中行
+        "delete-column", // 删除选中列
+        "delete-cell", // 删除单元格
+        "hide-row", // 隐藏选中行和显示选中行
+        "hide-column", // 隐藏选中列和显示选中列
+        "set-row-height", // 设置行高
+        "set-column-width", // 设置列宽
+        "|",
+        "clear", // 清除内容
+        "sort", // 排序选区
+        "orderAZ", // 升序
+        "orderZA", // 降序
+        "filter", // 筛选选区
+        "chart", // 图表生成
+        "image", // 插入图片
+        "link", // 插入链接
+        "data", // 数据验证
+        "cell-format", // 设置单元格格式
+    ], // 自定义单元格右键菜单
+    headerContextMenu: [
+        "copy", // 复制
+        "paste", // 粘贴
+        "|",
+        "insert-row", // 插入行
+        "insert-column", // 插入列
+        "delete-row", // 删除选中行
+        "delete-column", // 删除选中列
+        "delete-cell", // 删除单元格
+        "hide-row", // 隐藏选中行和显示选中行
+        "hide-column", // 隐藏选中列和显示选中列
+        "set-row-height", // 设置行高
+        "set-column-width", // 设置列宽
+        "|",
+        "clear", // 清除内容
+        "sort", // 排序选区
+        "orderAZ", // 升序
+        "orderZA", // 降序
+    ], // header菜单
+    sheetTabContextMenu: [
+        "delete",
+        "copy",
+        "rename",
+        "color",
+        "hide",
+        "|",
+        "move",
+        // "focus",
+    ], // 自定义底部sheet页右击菜单
+    filterContextMenu: [
+        "sort-by-asc",
+        "sort-by-desc",
+        "|",
+        "filter-by-color",
+        "|",
+        // "filter-by-condition",
+        // "|",
+        "filter-by-value",
+    ], // 筛选菜单
+    generateSheetId: () => uuidv4(),
+    hooks: {},
+    customToolbarItems: [],
+    currency: "¥",
+};
+//# sourceMappingURL=settings.js.map

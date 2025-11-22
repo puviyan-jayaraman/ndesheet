@@ -1,0 +1,27 @@
+import { jsx as _jsx } from "react/jsx-runtime";
+import { useContext, useMemo } from "react";
+import _ from "lodash";
+import { getRangetxt } from "@nde-sheet/core";
+import WorkbookContext from "../../context";
+const LocationBox = () => {
+    const { context } = useContext(WorkbookContext);
+    const rangeText = useMemo(() => {
+        const lastSelection = _.last(context.luckysheet_select_save);
+        if (!(lastSelection &&
+            lastSelection.row_focus != null &&
+            lastSelection.column_focus != null))
+            return "";
+        const rf = lastSelection.row_focus;
+        const cf = lastSelection.column_focus;
+        if (context.config.merge != null && `${rf}_${cf}` in context.config.merge) {
+            return getRangetxt(context, context.currentSheetId, {
+                column: [cf, cf],
+                row: [rf, rf],
+            });
+        }
+        return getRangetxt(context, context.currentSheetId, lastSelection);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [context.currentSheetId, context.luckysheet_select_save]);
+    return (_jsx("div", { className: "fortune-name-box-container", children: _jsx("div", { className: "fortune-name-box", tabIndex: 0, dir: "ltr", children: rangeText }) }));
+};
+export default LocationBox;
